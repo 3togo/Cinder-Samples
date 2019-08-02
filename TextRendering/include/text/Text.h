@@ -79,7 +79,7 @@ class Text {
 		mInvalid = true;
 	}
 
-	float getLeading() const { return ( mFont ? std::floorf( mFont->getLeading( mFontSize ) * mLineSpace + 0.5f ) : 0.0f ); }
+	float getLeading() const { return ( mFont ? ::floorf( mFont->getLeading( mFontSize ) * mLineSpace + 0.5f ) : 0.0f ); }
 
 	Alignment getAlignment() const { return mAlignment; }
 	void      setAlignment( Alignment alignment )

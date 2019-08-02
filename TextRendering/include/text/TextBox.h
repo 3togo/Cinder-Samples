@@ -69,7 +69,7 @@ class TextBox : public ph::text::Text {
 	virtual bool newLine( ci::vec2 *cursor )
 	{
 		cursor->x = 0.0f;
-		cursor->y += std::floorf( getLeading() + 0.5f );
+		cursor->y += ::floorf( getLeading() + 0.5f );
 
 		float h = getHeight();
 		return ( h == 0.0f || cursor->y < h );
