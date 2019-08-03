@@ -1,0 +1,8 @@
+AudioVisualizer
+AudioVisualizer/src/AudioVisualizerApp.cpp:24:10: fatal error: cinder/CameraUI.h: No such file or directory
+FlickrImageViewer/include/ph/ConcurrentMap.h:108:26: error: no matching function for call to ‘std::condition_variable::wait(std::lock_guard<std::mutex>&)’
+    mCondition.wait( lock );
+HexagonMirrorApp.cpp:(.text+0x5ae): undefined reference to `cinder::Capture::checkNewFrame() const'
+SMAA/src/Shader.cpp:26:10: fatal error: cinder/app/AppBasic.h: No such file or directory
+                       ^
+

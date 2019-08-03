@@ -4,7 +4,7 @@ set( CMAKE_VERBOSE_MAKEFILE ON )
 #set(__LINUX__)
 #set( CINDER_LINUX TRUE )   #not a must
 
-project(ShaderToy)
+project(TextRendering)
 
 #get_filename_component( CINDER_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../../../Cinder-android" ABSOLUTE )
 
@@ -24,10 +24,20 @@ include( "${CINDER_PATH}/proj/cmake/modules/cinderMakeApp.cmake" )
 SET(CMAKE_CXX_STANDARD_LIBRARIES  "${CMAKE_CXX_STANDARD_LIBRARIES} -lIrrKlang")
 #endif()
 ci_make_app(
-	APP_NAME	"ShaderToy"
+	APP_NAME	"TextRendering"
 	CINDER_PATH ${CINDER_PATH}
 	#SOURCES		${APP_PATH}/src/toolsApp.cpp
-	SOURCES		${APP_PATH}/src/ShaderToyApp.cpp
+	SOURCES		${APP_PATH}/src/TextRenderingApp.cpp
+	SOURCES		${APP_PATH}/include/text/FontStore.cpp
+	SOURCES		${APP_PATH}/include/text/Font.cpp
+	SOURCES		${APP_PATH}/include/text/Text.cpp
+	SOURCES		${APP_PATH}/include/text/TextLabels.cpp
+	SOURCES		${APP_PATH}/include/text/TextBox.cpp
+	SOURCES		${APP_PATH}/../TextRendering/include/text/FontStore.cpp
+	SOURCES		${APP_PATH}/../TextRendering/include/text/Font.cpp
+	SOURCES		${APP_PATH}/../TextRendering/include/text/Text.cpp
+	SOURCES		${APP_PATH}/../TextRendering/include/text/TextLabels.cpp
+	SOURCES		${APP_PATH}/../TextRendering/include/text/TextBox.cpp
     INCLUDES    ${APP_PATH}/include
     INCLUDES    ${APP_PATH}/src
     INCLUDES    ${APP_PATH}/../All/common
