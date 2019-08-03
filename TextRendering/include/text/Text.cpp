@@ -97,7 +97,7 @@ void Text::renderMesh()
 	std::u16string trimmed;
 
 	// initialize cursor position
-	vec2 cursor( 0.0f, std::floorf( mFont->getAscent( mFontSize ) + 0.5f ) );
+	vec2 cursor( 0.0f, ::floorf( mFont->getAscent( mFontSize ) + 0.5f ) );
 
 	// get word/line break information from Cinder's Unicode class if not available
 	if( mMust.empty() || mAllow.empty() )

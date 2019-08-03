@@ -19,12 +19,28 @@ include( "${CINDER_PATH}/proj/cmake/modules/cinderMakeApp.cmake" )
 
 ci_make_app(
 	APP_NAME	"Stars"
+	CINDER_PATH ${CINDER_PATH}
 	SOURCES		${APP_PATH}/src/StarsApp.cpp
+	SOURCES		${APP_PATH}/src/Cam.cpp
+	SOURCES		${APP_PATH}/src/Background.cpp
+	SOURCES		${APP_PATH}/src/Conversions.cpp
+	SOURCES		${APP_PATH}/src/Labels.cpp
+	SOURCES		${APP_PATH}/src/Constellations.cpp
+	SOURCES		${APP_PATH}/src/Stars.cpp
+	SOURCES		${APP_PATH}/src/UserInterface.cpp
 	SOURCES		${APP_PATH}/src/StarsApp.cpp
-	SOURCES		${APP_PATH}/src/StarsApp.cpp
-    CINDER_PATH ${CINDER_PATH}
+	SOURCES		${APP_PATH}/src/ConstellationLabels.cpp
+	SOURCES		${APP_PATH}/src/ConstellationArt.cpp
+	SOURCES		${APP_PATH}/src/Grid.cpp
+	SOURCES		${APP_PATH}/../TextRendering/include/text/FontStore.cpp
+	SOURCES		${APP_PATH}/../TextRendering/include/text/Font.cpp
+	SOURCES		${APP_PATH}/../TextRendering/include/text/Text.cpp
+	SOURCES		${APP_PATH}/../TextRendering/include/text/TextLabels.cpp
+	SOURCES		${APP_PATH}/../TextRendering/include/text/TextBox.cpp
     INCLUDES    ${APP_PATH}/include
+    INCLUDES    ${APP_PATH}/src
     INCLUDES    ${APP_PATH}/../All/common
     INCLUDES 	${APP_PATH}/../TextRendering/include
+    INCLUDES 	${APP_PATH}/../TextRendering/include/text
 
 )

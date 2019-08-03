@@ -106,7 +106,7 @@ void Conversions::mergeNames( ci::DataSourceRef hyg, ci::DataSourceRef ciel )
 
 		try {
 			uint32_t hr = Conversions::toInt( itr->substr( 0, 9 ) );
-			boost::algorithm::split( tokens, itr->substr( 9 ), boost::is_any_of( ";" ), boost::token_compress_off );
+			boost::algorithm::split( tokens,(const string) itr->substr( 9 ), boost::is_any_of( ";" ), boost::token_compress_off );
 
 			names.insert( std::pair<uint32_t, std::string>( hr, tokens[0] ) );
 		}

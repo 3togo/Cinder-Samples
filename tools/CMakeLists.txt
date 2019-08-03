@@ -18,13 +18,13 @@ file(GLOB_RECURSE SRC_FILES ${APP_PATH}/src/*.cpp)
 include( "${CINDER_PATH}/proj/cmake/modules/cinderMakeApp.cmake" )
 
 ci_make_app(
-    APP_NAME    "BloomingNeon"
-    SOURCES     ${APP_PATH}/src/BloomingNeonApp.cpp
-    SOURCES 	${APP_PATH}/../All/common/Pistons.cpp
-	SOURCES 	${SRC_FILES}
-    CINDER_PATH ${CINDER_PATH}
+	APP_NAME	"tools"
+	CINDER_PATH ${CINDER_PATH}
+	SOURCES		${APP_PATH}/src/toolsApp.cpp
     INCLUDES    ${APP_PATH}/include
+    INCLUDES    ${APP_PATH}/src
     INCLUDES    ${APP_PATH}/../All/common
     INCLUDES 	${APP_PATH}/../TextRendering/include
+    INCLUDES 	${APP_PATH}/../TextRendering/include/text
 
 )
