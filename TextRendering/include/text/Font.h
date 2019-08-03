@@ -86,16 +86,18 @@ class Font {
 	//!
 	ci::Rectf getBounds( uint16_t charcode, float fontSize = 12.0f ) const;
 	//!
-	inline ci::Rectf getBounds( const Metrics &metrics, float fontSize = 12.0f ) const;
+//	inline ci::Rectf getBounds( const Metrics &metrics, float fontSize = 12.0f ) const;
+	ci::Rectf getBounds( const Metrics &metrics, float fontSize = 12.0f ) const;
 	//!
 	ci::Rectf getTexCoords( uint16_t charcode ) const;
 	//!
-	inline ci::Rectf getTexCoords( const Metrics &metrics ) const;
+//	inline ci::Rectf getTexCoords( const Metrics &metrics ) const;
+	ci::Rectf getTexCoords( const Metrics &metrics ) const;
 	//!
 	float getAdvance( uint16_t charcode, float fontSize = 12.0f ) const;
 	//!
-	inline float getAdvance( const Metrics &metrics, float fontSize = 12.0f ) const;
-
+//	inline float getAdvance( const Metrics &metrics, float fontSize = 12.0f ) const;
+	float getAdvance( const Metrics &metrics, float fontSize = 12.0f ) const;
 	//!
 	void enableAndBind() const
 	{
