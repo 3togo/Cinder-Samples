@@ -1,18 +1,9 @@
 cmake_minimum_required(VERSION 3.0)
 set( CMAKE_VERBOSE_MAKEFILE ON )
-#include(CheckLibraryExist)
-#set(__LINUX__)
-#set( CINDER_LINUX TRUE )   #not a must
 
 project(SimpleShader)
 
-#get_filename_component( CINDER_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../../../Cinder-android" ABSOLUTE )
-
-#include( "${CINDER_PATH}/proj/cmake/modules/cinderMakeApp.cmake" )
-#include( "${CINDER_PATH}/proj/cmake/platform_linux.cmake" )
-
-
-#get_filename_component( CINDER_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../Cinder-linux" ABSOLUTE )
+get_filename_component( CINDER_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../../Cinder" ABSOLUTE )
 get_filename_component( APP_PATH "${CMAKE_CURRENT_SOURCE_DIR}/" ABSOLUTE )
 file(GLOB_RECURSE SRC_FILES ${APP_PATH}/src/*.cpp)
 #aux_source_directory(./src ${SRC_FILES})

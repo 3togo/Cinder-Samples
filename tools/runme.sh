@@ -1,5 +1,5 @@
 ../tools/updateCMakeLists.sh
-build_type=release
+build_type=Release
 #cinder_paths=$(find ~/git -type d -regex  "Cinder$")
 cinder_paths=$(find ~/git -maxdepth 2 -type d -name  Cinder)
 
@@ -12,9 +12,9 @@ fi
 cinder_path=${cinder_paths[0]}
 if [[ ! -d $cinder_path/buid ]]; then
     if [[ ! -d $cinder_path/buid_release ]]; then
-        cmd="ln -sf $cinder_path/build_release $cinder_path/build"
+        cmd="ln -sf $cinder_path/build_Release $cinder_path/build"
     elif [[ ! -d $cinder_path/buid_debug ]]; then
-        cmd="ln -sf $cinder_path/build_debug $cinder_path/build"
+        cmd="ln -sf $cinder_path/build_Debug $cinder_path/build"
     else
         echo "cannot find cinder path"
         exit

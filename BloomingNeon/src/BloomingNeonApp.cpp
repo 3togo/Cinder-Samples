@@ -204,20 +204,24 @@ void BloomingNeonApp::draw()
 
 	// draw the 3 Fbo's
 	gl::color( Color::white() );
-	gl::draw( mFboScene->getColorTexture(), Rectf( 0, 0, 400, 400 ) );
-	drawStrokedRect( Rectf( 0, 0, 400, 400 ) );
+	//gl::draw( mFboScene->getColorTexture(), Rectf( 0, 0, 400, 400 ) );
+	//drawStrokedRect( Rectf( 0, 0, 400, 400 ) );
 
-	gl::draw( mFboBlur1->getColorTexture(), Rectf( 0, 400, 0 + 400, 400 + 400 ) );
-	drawStrokedRect( Rectf( 0, 400, 0 + 400, 400 + 400 ) );
+	//gl::draw( mFboBlur1->getColorTexture(), Rectf( 0, 400, 0 + 400, 400 + 400 ) );
+	//drawStrokedRect( Rectf( 0, 400, 0 + 400, 400 + 400 ) );
 
-	gl::draw( mFboBlur2->getColorTexture(), Rectf( 400, 400, 400 + 400, 400 + 400 ) );
-	drawStrokedRect( Rectf( 400, 400, 400 + 400, 400 + 400 ) );
+	//gl::draw( mFboBlur2->getColorTexture(), Rectf( 400, 400, 400 + 400, 400 + 400 ) );
+	//drawStrokedRect( Rectf( 400, 400, 400 + 400, 400 + 400 ) );
+	gl::draw( mFboBlur2->getColorTexture(), Rectf( 0, 0, 800, 800 ) );
+	drawStrokedRect( Rectf( 0, 0, 800, 800 ) );
+
 
 	// draw our scene with the blurred version added as a blend
 	gl::color( Color::white() );
 	gl::draw( mFboScene->getColorTexture(), Rectf( 400, 0, 400 + 400, 0 + 400 ) );
 
 	gl::enableAdditiveBlending();
+	//gl::draw( mFboBlur1->getColorTexture(), Rectf( 400, 0, 400 + 400, 0 + 400 ) );
 	gl::draw( mFboBlur2->getColorTexture(), Rectf( 400, 0, 400 + 400, 0 + 400 ) );
 	gl::disableAlphaBlending();
 	drawStrokedRect( Rectf( 400, 0, 400 + 400, 0 + 400 ) );
