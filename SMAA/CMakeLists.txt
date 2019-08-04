@@ -18,9 +18,9 @@ ci_make_app(
 	APP_NAME	"SMAA"
 	CINDER_PATH ${CINDER_PATH}
 	#SOURCES		${APP_PATH}/src/toolsApp.cpp
-	SOURCES		${APP_PATH}/src/Shader.cpp
 	SOURCES		${APP_PATH}/src/SMAAApp.cpp
 	SOURCES		${APP_PATH}/src/SMAA.cpp
+	SOURCES		${APP_PATH}/src/Shader.cpp
 	SOURCES		${APP_PATH}/../All/common/Pistons.cpp
     INCLUDES    ${APP_PATH}/include
     INCLUDES    ${APP_PATH}/src

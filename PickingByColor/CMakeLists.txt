@@ -20,10 +20,10 @@ ci_make_app(
 	#SOURCES		${APP_PATH}/src/toolsApp.cpp
 	SOURCES		${APP_PATH}/src/PickingByColorApp.cpp
 	SOURCES		${APP_PATH}/../TextRendering/include/text/FontStore.cpp
-	SOURCES		${APP_PATH}/../TextRendering/include/text/Font.cpp
 	SOURCES		${APP_PATH}/../TextRendering/include/text/Text.cpp
-	SOURCES		${APP_PATH}/../TextRendering/include/text/TextLabels.cpp
 	SOURCES		${APP_PATH}/../TextRendering/include/text/TextBox.cpp
+	SOURCES		${APP_PATH}/../TextRendering/include/text/TextLabels.cpp
+	SOURCES		${APP_PATH}/../TextRendering/include/text/Font.cpp
     INCLUDES    ${APP_PATH}/include
     INCLUDES    ${APP_PATH}/src
     INCLUDES    ${APP_PATH}/../All/common
