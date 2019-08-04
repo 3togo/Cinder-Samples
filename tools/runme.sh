@@ -35,5 +35,6 @@ fi
 make -j $(nproc)
 #cmd="$build_type/release/DisplayShift/DisplayShift"
 cd $oldpwd
-find . -type f -name ${PWD##*/} -exec bash -c 'time $1 &' - {} \;
+#find . -type f -name ${PWD##*/} -exec bash -c 'time $1 &' - {} \;
+find . -type f -name ${PWD##*/}|grep $build_type |xargs -I {} bash -c 'time $1 &' - {} \; 
 
